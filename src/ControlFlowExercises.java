@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -5,17 +7,36 @@ public class ControlFlowExercises {
 	public static void main(String[] args) {
 	
 	Scanner scanner = new Scanner(System.in);
-		
-		System.out.print("What number would you like to go up to?");
-		int userInput = scanner.nextInt();
-		
-		System.out.printf("Here is your table!%n");
-		System.out.printf("%nnumber | squared | cubed%n------ | ------- | -----%n");
-		
-		for (int i = 1; i <= userInput; i++) {
-			int squared = i * i;
-			int cubed = i * i * i;
-			System.out.printf("%-7d| %-8d| %-5d%n", i, squared, cubed);
-		}
+	
+		do {
+			System.out.print("Enter a numerical grade between 0 and 100: ");
+			int userInput = scanner.nextInt();
+			
+			if (userInput >= 88 & userInput <= 100) {
+				String letterGrade = "A";
+				System.out.printf("Your letter grade is: %s%n", letterGrade);
+			} else if (userInput >= 80 & userInput <= 87) {
+				String letterGrade = "B";
+				System.out.printf("Your letter grade is: %s%n", letterGrade);
+			} else if (userInput >= 67 & userInput <= 79) {
+				String letterGrade = "C";
+				System.out.printf("Your letter grade is: %s%n", letterGrade);
+			} else if (userInput >= 60 & userInput <= 66) {
+				String letterGrade = "D";
+				System.out.printf("Your letter grade is: %s%n", letterGrade);
+			} else if (userInput >= 0 & userInput <= 59) {
+				String letterGrade = "F";
+				System.out.printf("Your letter grade is: %s%n", letterGrade);
+				}
+				
+			System.out.println("Would you like to continue? [Y/N]");
+			String userContinue = scanner.next();
+			
+			if (userContinue.equalsIgnoreCase("y")) {
+				boolean willContinue = true;
+			} else if (userContinue.equalsIgnoreCase("n")) {
+				boolean willContinue = false;
+			}
+		} while (willContinue);
 	}
 }
