@@ -7,8 +7,11 @@ public class ControlFlowExercises {
 	public static void main(String[] args) {
 	
 	Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Would you like to continue? [Y/N] ");
+		String userContinue = scanner.next();
 	
-		do {
+		while (userContinue.equalsIgnoreCase("y")){
 			System.out.print("Enter a numerical grade between 0 and 100: ");
 			int userInput = scanner.nextInt();
 			
@@ -28,15 +31,9 @@ public class ControlFlowExercises {
 				String letterGrade = "F";
 				System.out.printf("Your letter grade is: %s%n", letterGrade);
 				}
-				
-			System.out.println("Would you like to continue? [Y/N]");
-			String userContinue = scanner.next();
 			
-			if (userContinue.equalsIgnoreCase("y")) {
-				boolean willContinue = true;
-			} else if (userContinue.equalsIgnoreCase("n")) {
-				boolean willContinue = false;
-			}
-		} while (willContinue);
+			System.out.print("Would you like to continue? [Y/N] ");
+			userContinue = scanner.next();
+		}
 	}
 }
