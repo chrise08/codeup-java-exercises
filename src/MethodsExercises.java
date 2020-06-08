@@ -9,17 +9,27 @@ public class MethodsExercises {
 //		System.out.println(division(27, 9));
 //		System.out.println(modulus(8, 3));
 		
-		System.out.print("Enter a number between 1 and 10: ");
-		int userInput = getInteger(1, 10);
-		long factorial = getFactorial(userInput);
+//		System.out.print("Enter a number between 1 and 10: ");
+//		int userInput = getInteger(1, 10);
+//		long factorial = getFactorial(userInput);
+//
+//		System.out.print("Display factorial? [Y/N] ");
+//		String userContinue = scanner.next();
+//
+//		if (userContinue.equalsIgnoreCase("y")) {
+//			System.out.printf("%d! = %d%n", userInput, factorial);
+//		} else {
+//			System.out.println("Goodbye.");
+//		}
 		
-		System.out.print("Display factorial? [Y/N] ");
-		String userContinue = scanner.next();
-		
-		if (userContinue.equalsIgnoreCase("y")) {
-			System.out.printf("%d! = %d%n", userInput, factorial);
+		System.out.print("Enter the number of sides the dice have: ");
+		int sides = scanner.nextInt();
+		System.out.print("Roll dice? [Y/N] ");
+		String willContinue = scanner.next();
+		if (willContinue.equalsIgnoreCase("y")) {
+			System.out.printf("You rolled: %d and %d%n", diceRoll(sides), diceRoll(sides));
 		} else {
-			System.out.println("Goodbye.");
+			System.out.println("See you next time.");
 		}
 		
 	}
@@ -67,4 +77,7 @@ public class MethodsExercises {
 		return fact;
 	}
 	
+	public static int diceRoll(int num) {
+		return (int)Math.ceil(Math.random() * num);
+	}
 }
