@@ -8,7 +8,6 @@ public class Input {
 	
 	public Input() {
 		this.scanner = new Scanner(System.in);
-		System.out.println("this is input");
 	}
 	
 	public String getString() {
