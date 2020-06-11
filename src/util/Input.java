@@ -15,8 +15,8 @@ public class Input {
 	}
 	
 	public boolean yesNo() {
-//		String answer = getString();
 		return getString().toLowerCase().startsWith("y"); // simplest and most memory-efficient way
+//		String answer = getString();
 //		if (answer.equalsIgnoreCase("y")) {
 //			return true;
 //		} else if (answer.equalsIgnoreCase("yes")) {
