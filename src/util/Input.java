@@ -32,32 +32,42 @@ public class Input {
 	}
 	
 	public int getInt(int min, int max) {
-		if (getInt() > min && getInt() < max) {
-			return getInt();
+		int userInt = getInt();
+		if (userInt >= min && userInt <= max) {
+			return userInt;
 		} else {
-			do {
-				System.out.printf("Please enter an whole number between %d and %d: ", min, max);
-				return getInt();
-			} while (getInt() < min || getInt() > max);
+			System.out.printf("Invalid input. Please input an integer between %d and %d.%n", min, max);
+			return getInt(min, max);
 		}
 	}
 	
 	public int getInt() {
-		return scanner.nextInt();
+		if (scanner.hasNextInt()) {
+			return scanner.nextInt();
+		} else {
+			System.out.println("Invalid input. Please input a valid integer.");
+			scanner.next();
+			return getInt();
+		}
 	}
 	
 	public double getDouble(double min, double max) {
-		if (getDouble() > min && getDouble() < max) {
-			return getDouble();
+		double userDbl = getDouble();
+		if (userDbl >= min && userDbl <= max) {
+			return userDbl;
 		} else {
-			do {
-				System.out.printf("Please enter a number between %.2f and %.2f: ", min, max);
-				return getDouble();
-			} while (getDouble() < min || getDouble() > max);
+			System.out.printf("Invalid input. Please input an integer between %f and %f.%n", min, max);
+			return getDouble(min, max);
 		}
 	}
 	
 	public double getDouble() {
-		return scanner.nextDouble();
+		if (scanner.hasNextDouble()) {
+			return scanner.nextDouble();
+		} else {
+			System.out.println("Invalid input. Please input a valid integer.");
+			scanner.next();
+			return getDouble();
+		}
 	}
 }
