@@ -20,7 +20,7 @@ public class Person {
 	
 	// constructor
 	public Person(String name) {
-		this.setName(name);
+		this.name = name;
 	}
 	
 	public static void main(String[] args) {
