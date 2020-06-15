@@ -2,9 +2,10 @@ import java.util.Random;
 
 public class ServerNameGenerator {
 
-	static String[] adjectives = {"cool", "funny", "nice", "scary", "great", "red", "evil", "rich", "poor", "pure"};
+	private static String[] adjectives = {"cool", "funny", "nice", "scary", "great", "red", "evil", "rich", "poor",
+			"pure"};
 	
-	static String[] nouns = {"dog", "man", "cat", "monkey", "job", "trip", "banana", "car", "boat", "shirt"};
+	private static String[] nouns = {"dog", "man", "cat", "monkey", "job", "trip", "banana", "car", "boat", "shirt"};
 	
 	// method to get random element from passed array
 	public static String randomElement(String[] array) {
@@ -20,7 +21,7 @@ public class ServerNameGenerator {
 		String randomAdjective = randomElement(adjectives);
 		String randomNoun = randomElement(nouns);
 		
-		System.out.printf("%s-%s%n", randomAdjective, randomNoun);
+		System.out.printf("Here is your server name:%n%s-%s%n", randomAdjective, randomNoun);
 	}
 
 }
