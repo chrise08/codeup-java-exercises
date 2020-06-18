@@ -72,7 +72,6 @@ public class GradesApplication {
 		
 		
 		System.out.println("Welcome!");
-		System.out.println();
 		
 		int userChoice;
 		
@@ -106,16 +105,28 @@ public class GradesApplication {
 							System.out.println();
 						}
 					} while(searchAgain());
+					
+					System.out.println("Goodbye, have a nice day!");
 					break;
 				case 2:
 					for (Map.Entry<Integer, Student> entry : searchable.entrySet()) {
-						System.out.printf("#%d %s", entry.getKey(), entry.getValue().toString());
+						System.out.printf("#%d %s's grades: %s%n", entry.getKey(), entry.getValue().getName(),
+						                  entry.getValue().getGrades());
 					}
 					break;
 				case 3:
+					double averageSum = 0;
+					for (Map.Entry<Integer, Student> entry : searchable.entrySet()) {
+						averageSum += entry.getValue().getGradeAverage();
+					}
+					System.out.printf("Class average: %.2f", averageSum / students.size());
 					break;
 				case 4:
-					
+					System.out.println("name, github_username, average");
+					for (String username : students.keySet()) {
+						System.out.printf("%s, %s, %.2f%n", students.get(username).getName(), username,
+						                  students.get(username).getGradeAverage());
+					}
 					break;
 			}
 		} while (willContinue());
