@@ -7,24 +7,22 @@ public class Square extends Quadrilateral implements Measurable {
 	}
 	
 	@Override
-	void setLength(double length) {
+	public void setLength(double length) {
 		this.length = length;
-		this.width = length;
 	}
 	
 	@Override
-	void setWidth(double width) {
+	public void setWidth(double width) {
 		this.width = width;
-		this.length = width;
 	}
 	
 	@Override
 	public double getPerimeter() {
-		return 4 * length;
+		return 4 * this.length;
 	}
 	
 	@Override
 	public double getArea() {
-		return length * length;
+		return this.length * this.length;
 	}
 }
