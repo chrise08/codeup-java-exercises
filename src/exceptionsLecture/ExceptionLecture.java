@@ -29,19 +29,19 @@ public class ExceptionLecture {
 		// Exceptions may be be handled with a a try-catch block
 		// Be sure that the order of caught exceptions is most specific to least specific
 
-//        try {
-//            String st = null;
-//            System.out.println(st.toUpperCase());
-//        } catch(ArithmeticException e) {
-//            System.out.println("Error in arithmetic!");
-//        } catch (RuntimeException e) {
-//            System.out.println("A runtime exception happened!");
-//        } catch(Exception e) {
-//            System.out.println("Something went wrong!");
-//            System.out.println(e.getMessage());
-//        }
-//
-//        System.out.println("it will run");
+        try {
+            String st = null;
+            System.out.println(st.toUpperCase());
+        } catch(ArithmeticException e) {
+            System.out.println("Error in arithmetic!");
+        } catch (RuntimeException e) {
+            System.out.println("A runtime exception happened!");
+        } catch(Exception e) {
+            System.out.println("Something went wrong!");
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("it will run");
 		
 		
 		
