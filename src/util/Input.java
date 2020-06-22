@@ -44,10 +44,11 @@ public class Input {
 		String userInput = getString();
 		try {
 			Integer.valueOf(userInput);
+			return Integer.valueOf(userInput);
 		} catch (NumberFormatException e) {
 			System.out.println("Invalid input. Please input a valid integer.");
+			return getInt();
 		}
-		return Integer.valueOf(userInput);
 	}
 	
 	public double getDouble(double min, double max) {
@@ -64,9 +65,10 @@ public class Input {
 		String userInput = getString();
 		try {
 			Double.valueOf(userInput);
+			return Double.valueOf(userInput);
 		} catch (NumberFormatException e) {
 			System.out.println("Invalid input. Please input a valid integer.");
+			return getDouble();
 		}
-		return Double.valueOf(userInput);
 	}
 }
